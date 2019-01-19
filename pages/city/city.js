@@ -11,14 +11,13 @@ Page({
     hot:[],
     //最近访问
     history:[],
-    //定位
-    location:{},
     scrollId:"location",
     //0 - 没有开始定位
     //1 - 开始定位
     //2 - 定位成功
     //3 - 定位失败
     locationStatus:1,
+		//定位
     locationCity:{}
 	},
   /**
@@ -46,20 +45,15 @@ Page({
 				self.dealCityGrouping()
 				//开始定位
 				self.startLocation()
-				
-				
-				
-				
 				//获取历史城市
-				var history = []
-				history.push(wx.getStorageSync("Maoyan_historyCity"))
-				self.setData({
-					history:history
-				})
-				//console.log(self.data.history)
-				
-				
-				
+				if(wx.getStorageSync("Maoyan_historyCity")){
+						var getHistory = wx.getStorageSync("Maoyan_historyCity")
+						//console.log(getHistory)
+					self.setData({
+						history:getHistory
+					})
+					//console.log(self.data.history)
+				}
 			}
 		})
 	},
@@ -76,7 +70,7 @@ dealCityGrouping:function(){
 			list:[]
 		})
 	}
-	console.log(group)
+	//console.log(group)
 	//遍历每个城市, 提取出每个城市拼音的第一个字符, 归类的当前数组中
 	var cts = this.data.cts
 	for(var i=0;i<cts.length;i++){
@@ -152,12 +146,10 @@ startLocation(){
 				}
 				//console.log("发现cts中的定位城市")
 				//console.log(findCity)
-				
 				self.setData({
 					locationStatus:2,
           locationCity:findCity
 				})
-				
 			},
 			fail(){
 				self.setData({
@@ -174,20 +166,37 @@ startLocation(){
 		//存储数据
 		//类似 localStorage.setItem(key,value)
     wx.setStorageSync("Maoyan_selectCity",item)
-		
-		
-		
-		
 		//存储最近访问城市
-		if(wx.getStorageSync("Maoyan_historyCity")){
-			
-		}else{
-			wx.setStorageSync("Maoyan_historyCity",item)
+		var history = [];
+		if(wx.getStorageSync("Maoyan_historyCity")){//如果已经有历史城市
+			var getStorage = wx.getStorageSync("Maoyan_historyCity")
+			//console.log(getStorage)
+			for(var j=0;j<getStorage.length;j++){//循环将已有的Storage的数据遍历进history数组
+				history.push(getStorage[j])
+			}
+			//去重
+			var isRepeat = false;//设置isRepeat变量判断是否有重复 false-无重复| true-有重复
+			for(var m=history.length-1;m>=0;m--){
+				if(history[m].id==item.id){
+					var repeat = history.splice(m,1)
+					//console.log(repeat)
+					isRepeat = true
+					break;
+				}
+			}
+			if(!isRepeat){
+				history.unshift(item)
+			}else{
+				history.unshift(repeat[0])
+			}
+			if(history.length>6){
+				history.pop()
+			}
+			wx.setStorageSync("Maoyan_historyCity",history)//将倒叙后的history_black设置为新的Storage
+		}else{//没有历史城市
+			history.push(item)
+			wx.setStorageSync("Maoyan_historyCity",history)
 		}
-		
-		
-		
-		
 		//选择城市后返回上一界面
 		wx.navigateBack({
       delta: 1

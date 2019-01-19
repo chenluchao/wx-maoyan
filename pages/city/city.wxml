@@ -23,7 +23,7 @@
 		
 		<!-- 最近访问 -->
 		<view id="history" class="section">
-      <view class="section-title">
+      <view class="section-title" wx:if="{{history!=''}}">
         最近访问城市
       </view>
       <view class="section-list">
