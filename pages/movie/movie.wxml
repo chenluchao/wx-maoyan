@@ -1,0 +1,124 @@
+<!--pages/movie/movie.wxml-->
+<view>
+	<view class="top">
+		<view><navigator url="/pages/city/city" hover-class="none">{{city.nm}}</navigator></view>
+		<view class='select-box {{showIndex==2?"coming":""}}'>
+			<view class="select-box-item" bindtap="dealChange" data-index="1">正在上映</view>
+			<view class="select-box-item" bindtap="dealChange" data-index="2">即将上映</view>
+		</view>
+		<view class="search">
+			<navigator url="/pages/search/search" hover-class="none"><image src="../../image/img/search.png"></image></navigator>
+		</view>
+	</view>
+	<view class="content">
+		<!-- <view class="subpage" wx:if="{{showIndex==1}}"> -->
+		<!-- 正在上映 -->
+		<view class='subpage' style='{{showIndex==1?"":"display:none"}}'>
+			<view class="movie-list">
+				<view class="movie-item" wx:for="{{movieOnInfoList}}" wx:key="{{index}}">
+					<view class="left">
+						<image src="{{item.img}}"></image>
+					</view>
+					<view class="center">
+						<view wx:if="{{item.showst==3}}">
+							<view class="title">
+								<text>{{item.nm}}</text>
+								<view class="movie-label">
+									<text wx:if='{{item.version=="v3d imax"}}' class="version v3dimax"></text>
+									<text wx:if='{{item.version=="v3d"}}' class="version v2dimax"></text>
+									<text wx:if='{{item.version=="imax"}}' class="version imax">imax</text>
+									<text wx:if='{{item.version=="v2d imax"}}' class="version v3d">3d</text>
+								</view>
+							</view>
+							<view class="grade">
+								观众评
+								<text>{{item.sc}}</text>
+							</view>
+							<view class="actor">
+								<view><text>主演：</text>{{item.star}}</view>
+							</view>
+							<view class="num">
+								<text>{{item.showInfo}}</text>
+							</view>
+						</view>
+						<view wx:if="{{item.showst==4}}">
+							<view class="title">
+								{{item.nm}}
+							</view>
+							<view class="grade">
+								<text>{{item.wish}}</text>
+								人想看
+							</view>
+							<view class="actor">
+								<view><text>主演：</text>{{item.star}}</view>
+							</view>
+							<view class="num">
+								<text>{{item.rt}}上映</text>
+							</view>
+						</view>
+					</view>
+					<view class="right">
+						<navigator class="normal  {{item.showst==4?'pre':''}}" url="/pages/movieDetail/movieDetail">{{item.globalReleased==true?'购票':'预售'}}</navigator>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 最近最受期待 -->
+		<!-- <view class="subpage" wx:if="{{showIndex==2}}"> -->
+		<view class='subpage' style='{{showIndex==2?"":"display:none"}}'>
+			<view class="most-nav">最近最受期待</view>
+			<view class="mostExperted-list">
+				<view class="mostExperted-item" wx:for="{{mostExperted}}" wx:key="{{index}}">
+					<view class="most-top">
+						<view class="islike">
+							<image src="../../image/heart.png"></image>
+						</view>
+						<image src="{{item.img}}"></image>
+						<view class="want-look">{{item.wish}}人想看</view>
+					</view>
+					<view class="most-bottom">
+						<view class="most-title">
+							{{item.nm}}
+						</view>
+						<view class="most-time">
+							{{item.comingTitle}}
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 即将上映 -->
+			<view class="movie-list">
+				<view class="list-nav">1月18日 周五</view>
+				<view class="movie-item" wx:for="{{comingList}}" wx:key="{{index}}">
+					<view class="left">
+						<image src="{{item.img}}"></image>
+					</view>
+					<view class="center">
+						<view class="title">
+							<text>{{item.nm}}</text>
+							<view class="movie-label">
+								<text wx:if='{{item.version=="v3d imax"}}' class="version v3dimax"></text>
+								<text wx:if='{{item.version=="v3d"}}' class="version v2dimax"></text>
+								<text wx:if='{{item.version=="imax"}}' class="version imax">imax</text>
+								<text wx:if='{{item.version=="v2d imax"}}' class="version v3d">3d</text>
+							</view>
+						</view>
+						<view class="grade">
+							<text>{{item.wish}}</text>
+							人想看
+						</view>
+						<view class="actor">
+							<view><text>主演：</text>{{item.star}}</view>
+						</view>
+						<view class="num">
+							<text>{{item.rt}}上映</text>
+						</view>
+					</view>
+					<view class="right">
+						<navigator class="buy-button normal {{item.showst==4?'pre':''}} {{item.showst==1?'toggle-wish-nav':''}}">{{item.showst==1?'想看':'预售'}}</navigator>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,75 @@
+<!--pages/search/search.wxml-->
+<view class="body">
+	<view class="input-box">
+		<view class="in-im">
+			<input bindinput="dealChange" value="{{keyword}}" placeholder='搜电影、搜影院'></input>
+			<image src="../../image/hot_search.png"></image>
+			<image bindtap="dealCancel" wx:if="{{keyword!=''}}" src="../../image/cancel-btn.png"></image>
+		</view>
+		<view class="cancel"><navigator  open-type="navigateBack" hover-class="none">取消</navigator></view>
+	</view>
+	
+	<view class="history-box">
+		<view class="history-list">
+		</view>
+	</view>
+	
+	<!-- 热门搜索 -->
+	<view class="hot-search-box" wx:if="{{keyword==''}}">
+		<text class="hot-search">热门搜索</text>
+	</view>
+	<view class="result-box">
+	
+	    <view class="search-title" wx:if="{{movies.length>0}}">电影/电视剧/综艺</view>
+	    <view class="movie-list">
+	        <view class="movie-item" wx:for="{{movies}}" wx:key="{{index}}">
+	          <view class="item-left">
+	            <image class="item-img" src="{{item.img}}"></image>
+	          </view>
+	          <view class="item-right" wx:if="{{item.showst==1 || item.showst==2}}">
+	            <view class="line-ellipsis movie-title">{{item.nm}}
+	              <view class="version {{item.version}}"></view>
+	            </view>
+	            <view class="line-ellipsis"><text class="wish">{{item.wish}}</text>人想看</view>
+	            <view class="line-ellipsis">主演: {{item.star}}</view>
+	            <view class="line-ellipsis">{{item.rt}}上映</view>
+	          </view>
+	          <view class="item-right" wx:if="{{item.showst==3}}">
+	            <view class="line-ellipsis movie-title">
+	              {{item.nm}}
+	              <view class="version {{item.version}}"></view>
+	            </view>
+	            <view class="line-ellipsis">观众评{{item.sc}}</view>
+	            <view class="line-ellipsis">主演: {{item.star}}</view>
+	            <view class="line-ellipsis">{{item.showInfo}}</view>
+	          </view>
+	          <view class="item-right" wx:if="{{item.showst==4}}">
+	            <view class="line-ellipsis movie-title">{{item.nm}}
+	              <view class="version {{item.version}}"></view>
+	            </view>
+	            <view class="line-ellipsis"><text class="wish">{{item.wish}}</text>人想看</view>
+	            <view class="line-ellipsis">主演: {{item.star}}</view>
+	            <view class="line-ellipsis">{{item.rt}}上映</view>
+	          </view>
+	          <button class="buy-button normal {{item.showst==1?'pre':''}}">{{item.globalReleased==true?'购票':'预售'}}</button>
+	        </view>
+	      </view>
+	
+	     <view class="search-title"  wx:if="{{cinemas.length>0}}">影院</view>
+	    <view class="result-list">
+	      <view class="cinemas-item" wx:for="{{cinemas}}" wx:key="{{index}}">
+	        <view class="cinema-box">
+						<text class="cinema-name one-line">{{item.nm}}</text>
+						<text class="cinema-price"><text class="money">{{item.sellPrice}}</text>元起</text>
+					</view>
+					<view class="addr-box"><text class="one-line addr">{{item.addr}}</text><text class="distance">{{item.distance}}</text></view>
+					<view class="cinema-label">
+						<text class="seat blue">座</text>
+						<text wx:if='{{item.vipDesc}}' class="zhekou yellow">{{item.vipDesc}}</text>
+						<text wx:if='{{item.hallType[0]}}' class="dubi blue">{{item.hallType[0]}}</text>
+					</view>
+	      </view>
+	    </view>
+	  </view>
+	
+</view>

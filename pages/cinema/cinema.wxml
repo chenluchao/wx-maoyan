@@ -1,0 +1,42 @@
+<!--pages/cinema/cinema.wxml-->
+<view class="page">
+    <view class="top">
+        <view class="address">
+           <text>北京</text>
+        </view>
+        <view class="search-input">
+            <input type="text" placeholder='搜影院' />
+        </view>
+    </view>
+		
+		<view class="nav">
+			<view class="after">全城</view>
+			<view class="after">品牌</view>
+			<view>特色</view>
+		</view>
+		
+		<view class="cinema-list">
+			<view class="cinema-item" wx:for="{{cinemas}}" wx:key="{{index}}">
+				<view class="nm-price">
+					<text class="item-nm line-ellipsis">{{item.nm}}</text>
+					<text class="item-price-box"><text class="item-price">{{item.sellPrice}}</text>元起</text>
+				</view>
+				<view class="addr-distance">
+					<text class="item-addr line-ellipsis">{{item.addr}}</text>
+					<text class="item-distance">{{item.distance}}</text>
+				</view>
+				<view class='info'>
+					<text class="blue" wx:if='{{item.tag.allowRefund==1}}'>退</text>
+					<text class="blue" wx:if='{{item.tag.endorse==1}}'>改签</text>
+					<text class="yellow" wx:if='{{item.tag.snack==1}}'>小吃</text>
+					<text class="yellow" wx:if='{{item.tag.vipTag}}'>{{item.tag.vipTag}}</text>
+				</view>
+				<view class='info'>
+					{{item.promotion.platformActivityTag}}
+				</view>
+				<view class='info'>
+					{{item.promotion.cardPromotionTag}}
+				</view>
+			</view>
+		</view>
+</view>

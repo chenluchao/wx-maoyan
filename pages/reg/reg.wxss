@@ -1,0 +1,52 @@
+/* pages/reg/reg.wxss */
+page{
+	background-color: #F8F8F8;
+}
+.top{
+	font-size: 24rpx;
+	text-align: center;
+	background-color: white;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.top text:first-child{
+	color: #df2d2d;
+	margin-right: 24rpx;
+}
+.top text:nth-of-type(n+2){
+	margin-left: 24rpx;
+	margin-right: 24rpx;
+}
+.phone{
+	height: 80rpx;
+	margin-top: 20rpx;
+	background-color: white;
+	overflow: hidden;
+}
+.phone input{
+	margin-left: 10rpx;
+	margin-top: 14rpx;
+	font-size: 24rpx;
+	text-indent: 6rpx;
+}
+.check{
+	font-size: 24rpx;
+	margin-top: 20rpx;
+	padding-left: 10rpx;
+}
+.foot{
+	margin-top: 20rpx;
+}
+.foot button{
+	width: 96%;
+	margin-left: 2%;
+	background-color: #DCDCDC;
+	color: #ABABAB;
+	font-size: 32rpx;
+}
+.last{
+	color: red;
+	font-size: 24rpx;
+	text-align: center;
+  margin-top: 20rpx;
+}

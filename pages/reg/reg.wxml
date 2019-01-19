@@ -1,0 +1,21 @@
+<!--pages/reg/reg.wxml-->
+<view>
+	<view class="top">
+		<text>输入手机号</text>>
+		<text>输入验证码</text>>
+		<text>设置密码</text>
+	</view>
+	<view class="phone">
+		<input type="text" placeholder="请输入您的手机号" />
+	</view>
+	<view class="check">
+		<checkbox></checkbox>
+		<text>我已阅读并同意 《美团网用户协议》</text>
+	</view>
+	<view class="foot">
+		<button>获取验证码</button>
+	</view>
+	<view class="last">
+			猫眼电影 客服电话：400-670-5335
+	</view>
+</view>
