@@ -5,7 +5,7 @@
     background-color: #f5f5f5;
     line-height: 90rpx;
     display: flex;
-    padding-left: 20rpx;
+    padding-left: 65rpx;
 	box-sizing: border-box;
 }
 .address{
@@ -19,8 +19,8 @@
     margin-top: 15rpx;
     border-radius: 10rpx;
     line-height: 70rpx;
-	margin-left: 20rpx;
-	text-indent: 200rpx;
+	margin-left: 50rpx;
+	text-indent: 184rpx;
 }
 .nav{
 	display: flex;
@@ -57,7 +57,7 @@
 }
 .cinema-item{
 	width: 100%;
-	height: 220rpx;
+	height: 230rpx;
 	border-bottom: 1rpx solid #ccc;
 	box-sizing: border-box;
 }
@@ -110,21 +110,31 @@
 	right: 50rpx;
 }
 .info{
-  font-size: 14px;
+  font-size: 30rpx;
   color: #777;
   padding-left: 20rpx;
   line-height: 50rpx;
-  margin-top: 5rpx;
+}
+.info text{
+	vertical-align: middle;
+	margin-left: 5rpx;
+}
+.img-size{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
 }
 .blue{
 	color: #589daf;
 	padding: 1rpx 6rpx 1rpx 6rpx;
 	border: 1rpx solid #589daf;
 	margin-left: 4rpx;
+	font-size: 22rpx;
 }
 .yellow{
 	color: #f90;
 	padding: 1rpx 6rpx 1rpx 6rpx;
 	border: 1rpx solid #f90;
 	margin-left: 4rpx;
+	font-size: 22rpx;
 }
