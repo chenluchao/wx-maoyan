@@ -49,6 +49,7 @@
 	top: 170rpx;
 	bottom: 0;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 .cinema-list::-webkit-scrollbar{
 	width: 0;
@@ -60,6 +61,7 @@
 	height: 230rpx;
 	border-bottom: 1rpx solid #ccc;
 	box-sizing: border-box;
+	padding-left: 10rpx;
 }
 .nm-price{
 	width: 100%;
