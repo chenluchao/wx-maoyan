@@ -1,49 +1,6 @@
 <!--pages/mine/mine.wxml-->
+<text>pages/mine/mine.wxml</text>
+
 <view>
-	<view class="top">
-		<view class='select-box '>
-			<view class='select-box-item {{showIndex==1?"coming":""}}' bindtap="dealChange" data-index="1">美团账号登录</view>
-			<view class='select-box-item {{showIndex==2?"coming":""}}' bindtap="dealChange" data-index="2">手机验证登录</view>
-		</view>
-	</view>
-	<view class="content">
-		<view class="sunpage" wx:if="{{showIndex==1}}">
-			<view class="input-box">
-				<input type="text" placeholder="账户名/手机号/Email" />
-			</view>
-			<view class="input-box">
-				<input type="password" placeholder="请输入您的密码" />
-			</view>
-			<view class="but-box">
-				<button>登录</button>
-			</view>
-			<view class="reg-res">
-				<navigator url="/pages/reg/reg" hover-class="none">立即注册</navigator>
-				<navigator url="/pages/res/res" hover-class="none">找回密码</navigator>
-			</view>
-			<view class="foot">
-				<text>猫眼电影：<text class="r">400-670-5335</text></text>
-			</view>
-		</view>
-		<view class="sunpage" wx:if="{{showIndex==2}}">
-			<view class="input-box">
-				<input class="phone" type="text" placeholder="请输入您的手机号" />
-				<button class="gety">获取验证码</button>
-			</view>
-			<view class="input-box">
-				<input class="yanzm" type="text" placeholder="请输入短信验证码" />
-			</view>
-			<view class="but-box">
-				<button>登录</button>
-			</view>
-			<view class="reg-res">
-				<navigator url="/pages/reg/reg" hover-class="none">立即注册</navigator>
-				<navigator url="/pages/res/res" hover-class="none">找回密码</navigator>
-			</view>
-			<view class="foot">
-				<text>猫眼电影：<text class="r">400-670-5335</text></text>
-			</view>
-		</view>
-	</view>
-	
+	<button bindtap="dealLogout">退出</button>
 </view>

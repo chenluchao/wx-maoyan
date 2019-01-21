@@ -28,7 +28,7 @@ Page({
 				'content-type':'application/json'
 			},
 			success(res){
-				console.log(res.data.cinemas)
+				//console.log(res.data.cinemas)
 				self.setData({
 					cinemas:res.data.cinemas
 				})

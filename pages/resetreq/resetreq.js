@@ -1,4 +1,4 @@
-// pages/res/res.js
+// pages/resetreq/resetreq.js
 Page({
 
   /**

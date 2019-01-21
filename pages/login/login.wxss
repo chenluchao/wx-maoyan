@@ -1,0 +1,105 @@
+/* pages/login/login.wxss */
+.select-box{
+	display: flex;
+	height: 86rpx;
+	line-height: 86rpx;
+	font-size: 32rpx;
+	color: #7B7B7B;
+	border-bottom: 10rpx solid #d6d6d6;
+}
+.select-box-item{
+	width: 45%;
+	height: 100%;
+	text-align: center;
+}
+.coming{
+	color: #df2d2d;
+	border-bottom: 8rpx solid #df2d2d;
+}
+.select-box-item:first-child{
+	margin-left: 5%;
+}
+.select-box-item:last-child{
+	margin-right: 5%;
+}
+.input-box{
+	margin-left: 4%;
+	width: 96%;
+	height: 90rpx;
+	border-bottom: 2rpx solid #d6d6d6;
+	overflow: hidden;
+}
+.input-box input{
+	margin-top: 2%;
+	font-size: 28rpx;
+	width: 100%;
+	height: 80%;
+}
+.login-btn{
+	width: 90%;
+	margin-left: 5%;
+	background-color: #df2d2d;
+	color: white;
+	text-align: center;
+	border-radius: 8rpx;
+	margin-top: 15rpx;
+}
+.reg-res{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 20rpx;
+	overflow: hidden;
+}
+.reg-res navigator{
+	color: #df2d2d;
+	font-size: 28rpx;
+}
+.reg-res navigator:first-child{
+	float: left;
+}
+.reg-res navigator:last-child{
+	float: right;
+}
+.foot{
+	margin-top: 20rpx;
+	font-size: 28rpx;
+	text-align: center;
+}
+.foot .r{
+	color: red;
+}
+.foot text{
+	color: #666;
+}
+.input-box{
+	position: relative;
+}
+.input-box .phone{
+	width: 70%;
+}
+.sendSms{
+	font-size: 24rpx;
+	position: absolute;
+	right: 8rpx;
+	top: 12rpx;
+	color: #999;
+	background-color: #dcdcdc;
+}
+.login{
+	color: #999;
+	background-color: #dcdcdc;
+	width: 90%;
+	margin-left: 5%;
+	text-align: center;
+	border-radius: 8rpx;
+	margin-top: 15rpx;
+}
+.sendSmsOk{
+	border: 2rpx solid #df2d2d;
+	color: #df2d2d;
+	background-color: white;
+}
+.loginOk{
+	background-color: #df2d2d;
+	color: white;
+}

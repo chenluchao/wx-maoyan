@@ -3,13 +3,14 @@
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
-		"pages/movieDetail/movieDetail",
-		"pages/index/index",
-    "pages/search/search",
-    "pages/logs/logs",
-    "pages/reg/reg",
     "pages/city/city",
-    "pages/res/res"
+    "pages/search/search",
+    "pages/login/login",
+    "pages/reg/reg",
+    "pages/resetreq/resetreq",
+    "pages/logs/logs",
+		"pages/movieDetail/movieDetail",
+		"pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -32,15 +33,20 @@
       {
         "pagePath": "pages/cinema/cinema",
         "text": "影院",
-				"iconPath": "image/img/cinema.png",
-        "selectedIconPath": "image/img/cinema_active.png"
+				"iconPath":"image/img/cinema.png",
+				"selectedIconPath":"image/img/cinema_active.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-				"iconPath": "image/img/mine.png",
-        "selectedIconPath": "image/img/mine_active.png"
+				"iconPath":"image/img/mine.png",
+        "selectedIconPath":"image/img/mine_active.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许访问您的位置信息"
+    }
   }
 }
