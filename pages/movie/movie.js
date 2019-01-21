@@ -42,8 +42,8 @@ Page({
       },
       success(res) {
         var list = res.data.movieList
-				console.log("movieOnInfoList")
-				console.log(list)
+				//console.log("movieOnInfoList")
+				//console.log(list)
         for(var item of list){
           item.img = item.img.replace("w.h","128.180")
         }
@@ -65,8 +65,8 @@ Page({
     	},
     	success(res) {
     		var list = res.data.coming
-				console.log("mostExperted list")
-				console.log(list)
+				//console.log("mostExperted list")
+				//console.log(list)
     		for(var item of list){
     			item.img = item.img.replace("w.h","128.180")
     		}
@@ -89,8 +89,8 @@ Page({
       },
       success(res) {
         var list = res.data.coming
-				console.log("comingList")
-				console.log(list)
+				//console.log("comingList")
+				//console.log(list)
         for (var item of list) {
           item.img = item.img.replace("w.h", "128.180")
         }

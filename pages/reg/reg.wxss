@@ -3,11 +3,11 @@ page{
 	background-color: #F8F8F8;
 }
 .top{
-	font-size: 24rpx;
+	font-size: 28rpx;
 	text-align: center;
 	background-color: white;
-	height: 80rpx;
-	line-height: 80rpx;
+	height: 86rpx;
+	line-height: 86rpx;
 }
 .top text:first-child{
 	color: #df2d2d;
@@ -24,29 +24,29 @@ page{
 	overflow: hidden;
 }
 .phone input{
-	margin-left: 10rpx;
+	margin-left: 32rpx;
 	margin-top: 14rpx;
-	font-size: 24rpx;
+	font-size: 30rpx;
 	text-indent: 6rpx;
 }
 .check{
 	font-size: 24rpx;
-	margin-top: 20rpx;
-	padding-left: 10rpx;
+	margin-top: 30rpx;
+	padding-left: 32rpx;
 }
 .foot{
-	margin-top: 20rpx;
+	margin-top: 28rpx;
 }
 .foot button{
-	width: 96%;
-	margin-left: 2%;
+	width: 91%;
+	margin-left: 4%;
 	background-color: #DCDCDC;
 	color: #ABABAB;
-	font-size: 32rpx;
+	font-size: 42rpx;
 }
 .last{
 	color: red;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	text-align: center;
-  margin-top: 20rpx;
+  margin-top: 32rpx;
 }

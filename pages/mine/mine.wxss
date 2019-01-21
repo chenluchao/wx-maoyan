@@ -1,11 +1,11 @@
 /* pages/mine/mine.wxss */
 .select-box{
 	display: flex;
-	height: 60rpx;
-	line-height: 60rpx;
+	height: 86rpx;
+	line-height: 86rpx;
 	font-size: 32rpx;
 	color: #7B7B7B;
-	border-bottom: 8rpx solid #d6d6d6;
+	border-bottom: 10rpx solid #d6d6d6;
 }
 .select-box-item{
 	width: 45%;
@@ -25,13 +25,13 @@
 .input-box{
 	margin-left: 4%;
 	width: 96%;
-	height: 80rpx;
-	border-bottom: 4rpx solid #d6d6d6;
+	height: 90rpx;
+	border-bottom: 2rpx solid #d6d6d6;
 	overflow: hidden;
 }
 .input-box input{
 	margin-top: 2%;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	width: 100%;
 	height: 80%;
 }
@@ -52,7 +52,7 @@
 }
 .reg-res navigator{
 	color: #df2d2d;
-	font-size: 24rpx;
+	font-size: 28rpx;
 }
 .reg-res navigator:first-child{
 	float: left;
@@ -62,7 +62,7 @@
 }
 .foot{
 	margin-top: 20rpx;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	text-align: center;
 }
 .foot .r{
