@@ -1,21 +1,53 @@
 <!--pages/reg/reg.wxml-->
 <view>
 	<view class="top">
-		<text>输入手机号</text>>
-		<text>输入验证码</text>>
-		<text>设置密码</text>
+		<text class='{{step>=1?"red":""}}'>输入手机号</text>>
+		<text class='{{step>=2?"red":""}}'>输入验证码</text>>
+		<text class='{{step>=3?"red":""}}'>设置密码</text>
 	</view>
-	<view class="phone">
-		<input type="text" placeholder="请输入您的手机号" />
+	<view wx:if="{{step==1}}">
+		<view class="phone">
+			<input value="{{mobile}}" bindinput='dealInput' data-key='mobile' placeholder="请输入您的手机号" />
+		</view>
+		<view class="check">
+			<checkbox-group bindchange="checkboxChange">
+				<checkbox name="user-confirm" checked="{{isComfirm}}"></checkbox>
+				<text>我已阅读并同意 <text class="red">《美团网用户协议》</text></text>
+			</checkbox-group>
+		</view>
+		<view class="foot">
+			<button class='getSms {{isMobileTwoValidate&&isComfirm?"getSmsOk":""}}' bindtap="dealGetSms">获取验证码</button>
+		</view>
+		<view class="last">
+				© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
+		</view>
 	</view>
-	<view class="check">
-		<checkbox></checkbox>
-		<text>我已阅读并同意 《美团网用户协议》</text>
+	
+	<view wx:if="{{step==2}}">
+		<view class="phone">
+			<input value="{{code}}" data-key='code' bindinput='dealInput' type="text" placeholder="请输入验证码" />
+		</view>
+		<view class="foot">
+			<button class="getSmsOk" bindtap="dealCheckSms">提交验证码</button>
+		</view>
+		<view class="last">
+				© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
+		</view>
 	</view>
-	<view class="foot">
-		<button>获取验证码</button>
+	
+	<view wx:if="{{step==3}}">
+		<view class="phone">
+			<input value="{{password}}" data-key='password' bindinput='dealInput' type="text" placeholder="输入密码" />
+		</view>
+		<view class="phone">
+			<input value="{{rePassword}}" data-key='rePassword' bindinput='dealInput' type="text" placeholder="确定密码" />
+		</view>
+		<view class="foot">
+			<button class="getSmsOk" bindtap="dealSignup">注册</button>
+		</view>
+		<view class="last">
+				© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
+		</view>
 	</view>
-	<view class="last">
-			猫眼电影 客服电话：400-670-5335
-	</view>
+	
 </view>

@@ -19,7 +19,7 @@
 			</view>
 			<view class="reg-res">
 				<navigator url="/pages/reg/reg" hover-class="none">立即注册</navigator>
-				<navigator url="/pages/res/res" hover-class="none">找回密码</navigator>
+				<navigator url="/pages/resetreq/resetreq" hover-class="none">找回密码</navigator>
 			</view>
 			<view class="foot">
 				<text>© 猫眼电影：<text class="r">400-670-5335</text></text>

@@ -40,13 +40,22 @@ page{
 .foot button{
 	width: 91%;
 	margin-left: 4%;
-	background-color: #DCDCDC;
-	color: #ABABAB;
 	font-size: 42rpx;
 }
 .last{
-	color: red;
+	color: #333;
 	font-size: 28rpx;
 	text-align: center;
   margin-top: 32rpx;
+}
+.red{
+	color: #df2d2d;
+}
+.getSms{
+	background-color: #DCDCDC;
+	color: #ABABAB;
+}
+.getSmsOk{
+	background-color: #df2d2d;
+	color: white;
 }
