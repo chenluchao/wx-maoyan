@@ -1,13 +1,12 @@
 {
   "pages":[
-    "pages/reg/reg",
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
     "pages/city/city",
     "pages/search/search",
     "pages/login/login",
-    
+    "pages/reg/reg",
     "pages/resetreq/resetreq",
     "pages/logs/logs",
 		"pages/movieDetail/movieDetail",

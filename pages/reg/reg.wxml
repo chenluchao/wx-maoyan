@@ -31,22 +31,22 @@
 			<button class="getSmsOk" bindtap="dealCheckSms">提交验证码</button>
 		</view>
 		<view class="last">
-				© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
+			© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
 		</view>
 	</view>
 	
 	<view wx:if="{{step==3}}">
 		<view class="phone">
-			<input value="{{password}}" data-key='password' bindinput='dealInput' type="text" placeholder="输入密码" />
+			<input password="true" value="{{password}}" data-key='password' bindinput='dealInput' type="text" placeholder="输入密码" />
 		</view>
 		<view class="phone">
-			<input value="{{rePassword}}" data-key='rePassword' bindinput='dealInput' type="text" placeholder="确定密码" />
+			<input password value="{{rePassword}}" data-key='rePassword' bindinput='dealInput' placeholder="确定密码" />
 		</view>
 		<view class="foot">
 			<button class="getSmsOk" bindtap="dealSignup">注册</button>
 		</view>
 		<view class="last">
-				© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
+			© 猫眼电影 客服电话：<text class="red">400-670-5335</text>
 		</view>
 	</view>
 	
