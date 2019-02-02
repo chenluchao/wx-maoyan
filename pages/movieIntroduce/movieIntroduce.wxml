@@ -1,0 +1,153 @@
+<!--pages/movieIntroduce/movieIntroduce.wxml-->
+<view class="page">
+	<view class="top">
+	    <view class="movie-img">
+	        <image src="{{detailMovie.img}}" />
+	    </view>
+	    <view class="title">
+	        <view class="movie-nm line-ellipsis">
+	            {{detailMovie.nm}}
+	        </view>
+	        <view class="movie-nm-eng line-ellipsis">
+	            {{detailMovie.enm}}
+	        </view>
+	        <view wx:if="{{detailMovie.showst==3}}" class="grade line-ellipsis">
+	            <text class="num">{{detailMovie.sc}}</text>
+				<text>（{{detailMovie.bingeWatch}}</text>人评）
+	        </view>
+			<view wx:if="{{detailMovie.showst==4}}" class="grade line-ellipsis">
+				<text class="people">{{detailMovie.wish}}人想看</text>
+			</view>
+	        <view class="movie-type line-ellipsis">
+	            {{detailMovie.cat}}
+				<text class="movie-ver">{{detailMovie.ver}}</text>
+	        </view>
+	        <view class="movie-add line-ellipsis">
+	            {{detailMovie.src}}
+	        </view>
+	        <view wx:if="{{detailMovie.showst==3}}" class="movie-showtime line-ellipsis">
+	            {{detailMovie.rt}}
+	        </view>
+			<view wx:if="{{detailMovie.showst==4}}" class="movie-showtime line-ellipsis">
+			    {{detailMovie.pubDesc}}
+			</view>
+	    </view>
+	</view>
+	<view class="buy-btn-box">
+		<button class="buy-btn" bindtap='goBuyMovie'>特惠购票</button>
+	</view>
+	<!-- 文本点击展开收起 -->
+	<view class="introduce">
+		<view class="introduce-conbox">
+			<text class="introduce-con {{ellipsis?'ellipsis':'unellipsis'}}" >{{detailMovie.dra}}</text>
+		</view>
+		<view class='bg-updownbox' bindtap='ellipsis'>
+		  <image class='bg-updown' src="{{ellipsis?'../../image/down.png':'../../image/up.png'}}"></image>
+		</view>
+	</view>
+	
+	
+	<view class="grey"></view>
+	<view class="lookmovie-tell">
+		<text>观影小贴士</text>
+	</view>
+	<view class="grey"></view>
+	<view class="actors">
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p1.meituan.net/moviemachine/68a27959ecfcf3bf2a6efafa02b091c537553.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				于淼
+			</view>
+			<view class="actor-play line-ellipsis">
+				导演
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p0.meituan.net/movie/00581d7ea1be5280aa56d07b7037379b41043.jpg@50w_70h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				佟大为
+			</view>
+			<view class="actor-play line-ellipsis">
+				贾迪
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p0.meituan.net/moviemachine/fa92882745cfc214b1fcbd2062d639dc34054.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				马丽
+			</view>
+			<view class="actor-play line-ellipsis">
+				韩笑
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p0.meituan.net/moviemachine/b656f6b89f321e336f17db7ae460443f175325.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				霍思燕
+			</view>
+			<view class="actor-play line-ellipsis">
+				李楠
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p0.meituan.net/movie/4cb7ae90af1ac2d83fd841c7e3fdf58f150953.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				乔杉
+			</view>
+			<view class="actor-play line-ellipsis">
+				吴小江
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p0.meituan.net/moviemachine/91624c3a27c16f4337e9c10d3af9817c149380.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				田雨
+			</view>
+			<view class="actor-play line-ellipsis">
+				文伯
+			</view>
+		</view>
+		<view class="actor-one">
+			<view class="actor-img">
+				<image src="http://p1.meituan.net/moviemachine/083544d9d5874b1ea77e84768d409ba2206541.jpg@130w_180h.webp"></image>
+			</view>
+			<view class="actor-name line-ellipsis">
+				奚梦瑶
+			</view>
+			<view class="actor-play line-ellipsis">
+				白慧娇
+			</view>
+		</view>
+	</view>
+	<view class="grey"></view>
+	<view class="comments">
+		<view class="talk">讨论</view>
+		<view class="hotcommit">精选</view>
+		<view class="commit-one" wx:for="{{hotComments}}" wx:key="{{index}}">
+			<view class="commit-one-top">
+				<view class="commit-img">
+					<image src="{{item.avatarUrl}}"></image>
+				</view>
+				<view class="commit-ng">
+					<view class="line-ellipsis">{{item.nick}}</view>
+					<view class="commit-score line-ellipsis">给这部电影打了{{item.score}}分</view>
+				</view>
+			</view>
+			<view class="commit-one-con">
+				{{item.content}}
+			</view>
+		</view>
+	</view>
+</view>

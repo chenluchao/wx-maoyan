@@ -1,1 +1,236 @@
 /* pages/movieDetail/movieDetail.wxss */
+.page{
+	width: 100%;
+    overflow: hidden;
+}
+.top{
+    width: 100%;
+    height: 380rpx;
+    background-color: #6e7872; 
+    padding-top: 40rpx;
+    padding-left: 36rpx;
+    overflow: hidden;
+    display: flex;
+	box-sizing: border-box;
+}
+.right{
+	position: absolute;
+	top: 158rpx;
+	right: 30rpx;
+	width: 30rpx;
+	height: 40rpx;
+	overflow: hidden;
+}
+.right navigator{
+	display: block;
+	width: 30rpx;
+	height: 40rpx;
+	background-size: 100% 100%;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAWCAYAAAAfD8YZAAAAAXNSR0IArs4c6QAAAS5JREFUOBGVkktuwkAMhpOoJ+hhSouE2HbDgiVCNCAOVtQHnINHhbgMJ6g6/f9gR848kmDJeOzxZ3scskzEOfcKXUMLjXXZByYQhJlqMvz3PM//1E9Z7fJoEp5wXvWZoILRZQtg7xVYdhXQzuR2XoEB/NYCOSkVdKI/g441BnuBbmI7aMAE7ilgxyaboYOD4RMO9EWiTwhgJksBLtEvUNolRmGvwJG+yDNsXSB4s2aplR3M4Y80BnuGfiQ7m0Q2qP6JJvaLc/VpTKx5lPe9IfpibviMb+4lOXYXyGLRsRPgSTsSpASdW8Av+YQ3Er+NzgIuELdvZMcAZIUaBsgpCA55IZIEeV+NLSC32hskXCTAH9xFRyWkUsgSrhqAJfjpL8fch0dMMIGWMkmYEIn8Az5Wgp5LHlhmAAAAAElFTkSuQmCC);
+}
+.movie-img{
+    width: 214rpx;
+    height: 300rpx;
+    overflow: hidden;
+}
+.movie-img image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+.title{
+	width: 360rpx;
+	height: 100%;
+	padding-left: 30rpx;
+	color: #fff;
+}
+.line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.movie-nm{
+	font-size: 40rpx;
+	width: 360rpx;
+}
+.movie-nm-eng{
+	font-size: 24rpx;
+	margin-top: 15rpx;
+}
+.grade{
+	font-size: 24rpx;
+	margin-top: 15rpx;
+}
+.grade .num{
+	font-size: 32rpx;
+	color: #fc0;
+	font-weight: bold;
+}
+.people{
+	color: #fc0;
+	font-weight: bold;
+}
+.movie-type,.movie-add,.movie-showtime{
+	font-size: 28rpx;
+	margin-top: 15rpx;
+}
+.movie-ver{
+	padding: 4rpx;
+	font-size: 14rpx;
+	border: 1rpx solid #fff;
+	vertical-align: middle;
+}
+.time-bar{
+	width: 100%;
+	height: 80rpx;
+	white-space: nowrap;
+	overflow-x: scroll;
+	color: #666;
+	border-bottom: 1rpx solid #F5F5F5;
+}
+.time-bar::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+.time-bar view{
+	display: inline-block;
+	width: 33%;
+	height: 80rpx;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	font-size: 30rpx;
+}
+.nav{
+	display: flex;
+	height: 80rpx;
+	background-color: white;
+	border-bottom: 4rpx solid #f5f5f5;
+	overflow: hidden;
+	box-sizing: border-box;
+	color: #666;
+}
+.nav view{
+	width: 33%;
+	height: 100%;
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 28rpx;
+}
+.after::after{
+	position: relative;
+	left: 100rpx;
+	top: 0;
+	content: "";
+	border: 1rpx dotted #e8e8e8;
+}
+.subpage{
+	position: absolute;
+	width: 100%;
+	top: 541rpx;
+	bottom: 0;
+	overflow-y: scroll;
+}
+.active{
+	color: #f03d37;
+	border-bottom: 2rpx solid #f03d37;
+}
+.cinema-list{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.cinema-list::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+.cinema-item{
+	width: 100%;
+	height: 230rpx;
+	border-bottom: 1rpx solid #ccc;
+	box-sizing: border-box;
+	padding-left: 10rpx;
+}
+.nm-price{
+	width: 100%;
+	color: #000000;
+	font-size: 40rpx;
+	padding-left: 20rpx;
+	line-height: 50rpx;
+	margin-top: 35rpx;
+}
+.item-nm{
+	display: inline-block;
+	max-width: 76%;
+	vertical-align: middle;
+}
+.item-price-box{
+	display: inline-block;
+	margin-left: 20rpx;
+	font-size: 24rpx;
+	color: #f03d37;
+	vertical-align: middle;
+}
+.item-price{
+	display: inline-block;
+	font-size: 42rpx;
+	margin-left: 10rpx;
+}
+.addr-distance{
+	width: 100%;
+	color: #666;
+	font-size: 32rpx;
+	padding-left: 20rpx;
+	position: relative;
+}
+.item-addr{
+	display: inline-block;
+	max-width: 75%;
+	vertical-align: middle;
+}
+.line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.item-distance{
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	right: 50rpx;
+}
+.info{
+  font-size: 30rpx;
+  color: #777;
+  padding-left: 20rpx;
+  line-height: 50rpx;
+}
+.info text{
+	vertical-align: middle;
+	margin-left: 5rpx;
+}
+.img-size{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+}
+.blue{
+	color: #589daf;
+	padding: 1rpx 6rpx 1rpx 6rpx;
+	border: 1rpx solid #589daf;
+	margin-left: 4rpx;
+	font-size: 22rpx;
+}
+.yellow{
+	color: #f90;
+	padding: 1rpx 6rpx 1rpx 6rpx;
+	border: 1rpx solid #f90;
+	margin-left: 4rpx;
+	font-size: 22rpx;
+}

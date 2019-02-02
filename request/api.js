@@ -1,5 +1,5 @@
-const urlPrefix = "http://192.168.43.26/project/maoyan/index.php/";
-//const urlPrefix = "http://127.0.0.1/project/maoyan/index.php/";
+//const urlPrefix = "http://192.168.43.26/project/maoyan/index.php/";
+const urlPrefix = "http://127.0.0.1/project/maoyan/index.php/";
 //首页(电影列表-正在上映)
 
 //电影列表页 开始==================================================
@@ -122,7 +122,7 @@ const filterCinemasUrl = urlPrefix + "api/filterCinemas";
 //影院列表页 结束==================================================
 
 //影院详情页 结束==================================================
-//	接口1：影院详情接口/超值套餐
+//	接口1：影院详情接口/超值套餐cinemaDetail
 //		类型： GET
 //		参数1: cinemaId=135		影院id
 //	案例：http://127.0.0.1/project/maoyan/index.php/api/cinemaDetail?cinemaId=135

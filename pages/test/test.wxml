@@ -1,0 +1,17 @@
+<!--pages/test/test.wxml-->
+<view class="testone">
+	
+	
+	<view>
+		<view class='pay-hint-tillebox'>
+			<text class='pay-hint-tille'>电影点击展开收起</text>
+		</view>
+	  <text class="pay-hint-content {{ellipsis?'ellipsis':'unellipsis'}}" >1. 支付成功后，将会推送排队号；就诊当日可直接前往诊室等待叫号就诊，无需再现场缴费、排队。\n2. 已完成支付挂号费用的用户，如在就诊前一日取消预约订单，成功申请取消订单后，正常情况下系统将会在7个工作日内自动退费至用户支付账号内。\n3. 订单在正常状态下（非系统故障、非医生临时停诊）被爽约，由于占用了医院号源，此类订单不予以退费。</text>
+	  <view class='bg-white-ellipsis' bindtap='ellipsis'>
+	    <image class='img-ellipsis' src="{{ellipsis?'../../image/down.png':'../../image/up.png'}}"></image>
+	  </view>
+	</view>
+	
+	
+	<view class="showover">电影介绍点击展开收起效果完毕</view>
+</view>

@@ -58,7 +58,7 @@
 						</view>
 					</view>
 					<view class="right">
-						<navigator class="normal  {{item.showst==4?'pre':''}}" url="/pages/movieDetail/movieDetail">{{item.globalReleased==true?'购票':'预售'}}</navigator>
+						<navigator bindtap="setId" data-id="{{item.id}}" class="normal  {{item.showst==4?'pre':''}}" url="/pages/movieDetail/movieDetail">{{item.globalReleased==true?'购票':'预售'}}</navigator>
 					</view>
 				</view>
 			</view>

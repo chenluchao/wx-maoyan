@@ -15,6 +15,13 @@ Page({
 			nm:"北京"
 		}
   },
+	setId(e){
+		// console.log(e)
+		// console.log("set movieId")
+		// console.log(e.currentTarget.dataset.id)
+		var movieId=e.currentTarget.dataset.id
+		wx.setStorageSync("Maoyan_movieId",movieId)
+	},
 	dealChange(e){
 		var tag = e.currentTarget
 		var index = tag.dataset.index
@@ -42,8 +49,8 @@ Page({
       },
       success(res) {
         var list = res.data.movieList
-				//console.log("movieOnInfoList")
-				//console.log(list)
+				console.log("movieOnInfoList")
+				console.log(list)
         for(var item of list){
           item.img = item.img.replace("w.h","128.180")
         }
@@ -89,8 +96,8 @@ Page({
       },
       success(res) {
         var list = res.data.coming
-				//console.log("comingList")
-				//console.log(list)
+// 				console.log("comingList")
+// 				console.log(list)
         for (var item of list) {
           item.img = item.img.replace("w.h", "128.180")
         }

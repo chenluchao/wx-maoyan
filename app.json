@@ -1,5 +1,6 @@
 {
   "pages":[
+    
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
@@ -9,8 +10,11 @@
     "pages/reg/reg",
     "pages/resetreq/resetreq",
     "pages/logs/logs",
-		"pages/movieDetail/movieDetail",
-		"pages/index/index"
+    "pages/movieDetail/movieDetail",
+    "pages/movieIntroduce/movieIntroduce",
+    "pages/cinemaDetail/cinemaDetail",
+    "pages/index/index",
+		"pages/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",

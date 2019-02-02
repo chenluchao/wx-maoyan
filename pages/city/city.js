@@ -104,7 +104,7 @@ startLocation(){
         const longitude = res.longitude
         const speed = res.speed
         const accuracy = res.accuracy
-        //console.log("longitude=" + longitude + " latitude=" + latitude)
+        console.log("longitude=" + longitude + " latitude=" + latitude)
         self.getCurrentCity(longitude, latitude)
       },
       fail(){
@@ -130,7 +130,7 @@ startLocation(){
         var str = res.data.substring("renderReverse&&renderReverse(".length, res.data.length-1)
 				//console.log(str)
 				var dict = JSON.parse(str)
-				//console.log(dict)
+				console.log(dict)
 				var cityName = dict.result.addressComponent.city
 				//去掉最后的字符 ”市“
 				cityName = cityName.substring(0,cityName.length-1)

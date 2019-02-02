@@ -30,7 +30,7 @@
         <view class="hot-item" wx:for="{{history}}" 
 					wx:for-item="historyCity" 
           wx:for-index="historyCityIndex"
-          wx:key="{{historyCityIndex}}">
+          wx:key="{{historyCityIndex}}" bindtap="dealSelectCity" data-item="{{historyCity}}">
           {{historyCity.nm}}
         </view>
       </view>

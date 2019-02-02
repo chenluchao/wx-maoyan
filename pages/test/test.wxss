@@ -1,0 +1,40 @@
+/* pages/test/test.wxss */
+.pay-hint-tillebox{
+	text-align: center;
+}
+.pay-hint-tille{
+	color: #f40;
+}
+.pay-hint-content{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+.ellipsis{
+  -webkit-line-clamp:3;
+  opacity: 0.75;
+}
+.unellipsis{
+  -webkit-line-clamp:0;
+  opacity: 1;
+}
+.img-ellipsis{
+	width: 25px;
+	height: 25px;
+}
+.bg-white-ellipsis{
+	text-align: center;
+}
+.showover{
+	height: 50rpx;
+	text-align: center;
+	background-color: #f90;
+	color: blueviolet;
+	font-size: 40rpx;
+}

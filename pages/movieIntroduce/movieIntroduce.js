@@ -1,4 +1,4 @@
-// pages/movieDetail/movieDetail.js
+// pages/movieIntroduce/movieIntroduce.js
 var api = require("../../request/api.js")
 
 Page({
@@ -8,17 +8,20 @@ Page({
    */
   data: {
 	  detailMovie:[],
-	  movieUrl:[],
-	  dates:[],
-	  showIndex:1
+	  hotComments:[],
+	  ellipsis: true,
   },
-  dealChange(e){
-  	var tag = e.currentTarget
-  	var index = tag.dataset.index
-  	
-  	this.setData({
-  		showIndex:index
-  	})
+  // 文本点击展开收起
+  ellipsis: function () {  
+    var value = !this.data.ellipsis;
+    this.setData({
+      ellipsis: value
+    })
+  },
+  goBuyMovie:function(){
+	wx.navigateTo({
+		url: "../movieDetail/movieDetail"
+	})
   },
 
   /**
@@ -37,7 +40,8 @@ Page({
 	  		'content-type': 'application/json' // 默认值
 	  	},
 	  	success(res) {
-			// console.log(res)
+// 			console.log("movieIntroduce")
+// 			console.log(res)
 			var detailMovie=res.data.detailMovie
 			detailMovie.img = detailMovie.img.replace("w.h", "128.180")
 			// console.log(detailMovie);
@@ -47,35 +51,26 @@ Page({
 	  	}
 	  })
 	  
-	  var url = api.movieUrl;
-	  wx.request({
-	  	url: url,
-	  	data: {
-	  		movieId:movie_Id,
-			day:"2019-01-08",
-			cityId:1
-	  	},
-	  	header: {
-	  		'content-type': 'application/json' // 默认值
-	  	},
-	  	success(res) {
-			// console.log(res)
-			var movieUrl=res.data.cinemas
-			var dates=res.data.showDays.dates
-			// console.log(dates)
-			// console.log(movieUrl);
-	  		self.setData({
-	  			movieUrl: movieUrl,
-				dates:dates
-	  		})
-	  	}
-	  })
-	  
-  },
-  setCinemaDet(e){
-	  // console.log(e.currentTarget.dataset.cinemadet)
-	  var cinemeDet=e.currentTarget.dataset.cinemadet
-	  wx.setStorageSync("Maoyan_cinemeDet",cinemeDet)
+	  var url = "http://m.maoyan.com/review/v2/comments.json";
+	  	  wx.request({
+	  	  	url: url,
+	  	  	data: {
+	  	  		movieId:movie_Id
+	  	  	},
+	  	  	header: {
+	  	  		'content-type': 'application/json' // 默认值
+	  	  	},
+	  	  	success(res) {
+// 	  			console.log("res")
+// 	  			console.log(res)
+	  			var hotComments=res.data.data.hotComments
+	  	  		self.setData({
+	  	  			hotComments: hotComments
+	  	  		})
+				// console.log(hotComments)
+	  	  	}
+	  	  })
+
   },
 
   /**

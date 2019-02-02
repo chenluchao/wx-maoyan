@@ -1,0 +1,55 @@
+/* pages/cinemaDetail/cinemaDetail.wxss */
+/* 头部*/
+.top{
+	display: flex;
+}
+.line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.cinema-info{
+	width: 590rpx;
+	height: 130rpx;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 30rpx 0 30rpx 30rpx;
+}
+.cinema-nm{
+	color: #333;
+	font-size: 30rpx;
+}
+.cinema-addr{
+	color: #999;
+	font-size: 26rpx;
+}
+.border{
+	position: absolute;
+	top: 25rpx;
+	right: 160rpx;
+	width: 0;
+	height: 80rpx;
+	border-right: 2rpx solid #999;
+}
+.addr-imgbox{
+	width: 162rpx;
+	height: 104rpx;
+}
+.addr-img{
+	width: 55rpx;
+	height: 60rpx;
+	overflow: hidden;
+	margin: 35rpx 50rpx 0 60rpx;
+}
+.addr-img image{
+	width: 100%;
+	height: 100%;
+}
+/* 电影列表 */
+.movie-list{
+	width: 100%;
+	height: 220rpx;
+	background-color: #40454d;
+	border-top: 1rpx solid #b3a19d;
+	border-bottom: 1rpx solid #b3a19d;
+}
