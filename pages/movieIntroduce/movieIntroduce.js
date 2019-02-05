@@ -12,7 +12,7 @@ Page({
 	  ellipsis: true,
   },
   // 文本点击展开收起
-  ellipsis: function () {  
+  ellipsis: function () {
     var value = !this.data.ellipsis;
     this.setData({
       ellipsis: value
@@ -30,7 +30,8 @@ Page({
   onLoad: function (options) {
 	  var self = this;
 	  var movie_Id=wx.getStorageSync("Maoyan_movieId")
-	   var url = "http://m.maoyan.com/ajax/detailmovie";
+	   // var url = "http://m.maoyan.com/ajax/detailmovie";
+	   var url = api.movieDetailUrl
 	  wx.request({
 	  	url: url,
 	  	data: {
@@ -51,7 +52,8 @@ Page({
 	  	}
 	  })
 	  
-	  var url = "http://m.maoyan.com/review/v2/comments.json";
+	  // var url = "http://m.maoyan.com/review/v2/comments.json";
+	  var url = api.commentsUrl
 	  	  wx.request({
 	  	  	url: url,
 	  	  	data: {

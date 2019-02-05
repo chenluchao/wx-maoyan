@@ -8,8 +8,29 @@ Page({
    */
   data: {
 	  cinema:[],
-	  movieList:[]
-
+	  movieList:[],
+	  showOneMovie:[],
+	  showIndex:0,
+	  dealList:[]
+  },
+  dealChange(e){
+  	var tag = e.currentTarget
+  	var index = tag.dataset.index
+  	
+  	this.setData({
+  		showIndex:index
+  	})
+  },
+	clickMovie(e){
+		console.log(e)
+	},
+  clickMovie(e){
+		//console.log(e)
+		var showOneMovie = e.currentTarget.dataset.movieone
+		this.setData({
+			showOneMovie: showOneMovie
+		})
+		console.log(this.data.showOneMovie)
   },
 
   /**
@@ -38,13 +59,19 @@ Page({
 		success(res) {
 			//console.log(res)
 			var movieList=res.data.showData.movies
-			//console.log(movieList)
+			var dealList=res.data.dealList.dealList
 			for(var i=0;i<movieList.length;i++){
 				movieList[i].img = movieList[i].img.replace("w.h", "128.180")
 			}
-			console.log(movieList);
+			for(var j=0;j<dealList.length;j++){
+				dealList[j].imageUrl = dealList[j].imageUrl.replace("w.h","128.180")
+			}
+			console.log(dealList)
+			// console.log(movieList);
 			self.setData({
-				movieList: movieList
+				movieList: movieList,
+				showOneMovie:movieList[0],
+				dealList:dealList
 			})
 		}
 	})

@@ -17,6 +17,63 @@
 		</view>
 	</view>
 	<view class="movie-list">
-		
+		<swiper display-multiple-items="5">
+			<!-- <block> -->
+			<swiper-item class="swiper-item" wx:for="{{movieList}}" wx:key="{{index}}" data-movieOne="{{item}}" bindtap="clickMovie">
+				<image wx:if="{{item.img}}" src="{{item.img}}" class="slide-image"/>
+			</swiper-item>
+			<!-- </block> -->
+		</swiper>
+	</view>
+	<view class="movie-info">
+		<view class="movie-info-nm line-ellipsis">{{showOneMovie.nm}}<text class="movie-info-sc"> {{showOneMovie.sc}}分</text></view>
+		<view class="movie-info-desc line-ellipsis">{{showOneMovie.desc}}</view>
+	</view>
+	<view class="showDate">
+		<view class="showDateOne" wx:for="{{showOneMovie.shows}}" wx:key="{{index}}">
+			<view bindtap="dealChange" data-index="{{index}}"  class='{{showIndex==index?"active":""}}'>{{item.dateShow}}</view>
+		</view>
+	</view>
+	<view class="subpage" wx:for="{{showOneMovie.shows}}" wx:key="{{index}}"  style='{{showIndex==index?"":"display:none"}}'>
+		<view class="movie-item" wx:for="{{item.plist}}" wx:for-item="movieItem" wx:for-index="movieIndex" wx:key="{{movieIndex}}">
+			<view class="movieTime">
+				<view class="movietm">{{movieItem.tm}}</view>
+				<view class="movieOver"><text>{{showOneMovie.dur}}</text>分钟</view>
+			</view>
+			<view class="movieLang">
+				<view class="movielg">{{movieItem.lang}}</view>
+				<view class="movieth">{{movieItem.th}}</view>
+			</view>
+			<view class="movieMoney">
+				<view class="movieprice"><text wx:if="{{movieItem.vipPrice}}">￥</text>{{movieItem.vipPrice}}<text wx:if="{{movieItem.vipPriceName}}" class="vipPriceName">{{movieItem.vipPriceName}}</text><text wx:if="{{movieItem.vipPrice}}" class="vipPrice">￥{{movieItem.vipPrice}}</text></view>
+				<view class="moviedesc">{{movieItem.extraDesc}}</view>
+			</view>
+			<view class="movieBuy">
+				<button>购票</button>
+			</view>
+		</view>
+	</view>
+	<view class="grey"></view>
+	<view class="dealListBox">
+		<view class="dealTitle">影院超值套餐</view>
+		<view class="dealListOne" wx:for="{{dealList}}" wx:key="{{index}}">
+			<view class="dealimg">
+				<image src="{{item.imageUrl}}" />
+			</view>
+			<view class="dealcon">
+				<view class="dealcon-title">
+					<text class="dealNum" wx:if="{{item.recommendPersonNum==2}}">双人</text>
+					<text class="dealNum" wx:if="{{item.recommendPersonNum==1}}">单人</text>
+					{{item.title}}
+				</view>
+				<view class="dealcon-pay">
+					{{item.curNumberDesc}}
+				</view>
+				<view class="dealcon-buy">
+					<text class="dealprice">￥{{item.price}}</text>
+					<text class="dealgobuy">去购买</text>
+				</view>
+			</view>
+		</view>
 	</view>
 </view>

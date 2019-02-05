@@ -38,3 +38,16 @@
 	color: blueviolet;
 	font-size: 40rpx;
 }
+
+/* 轮播图 */
+.swiper-con{
+	width: 100%;
+	height: 300rpx;
+	border: solid 2rpx #f90;
+	background-color: #999;
+	box-sizing: border-box;
+}
+swiper-item image{
+	width: 250rpx;
+	height: 100%;
+}

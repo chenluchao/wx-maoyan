@@ -27,7 +27,8 @@ Page({
   onLoad: function (options) {
 	  var self = this;
 	  var movie_Id=wx.getStorageSync("Maoyan_movieId")
-	   var url = "http://m.maoyan.com/ajax/detailmovie";
+	   //var url = "http://m.maoyan.com/ajax/detailmovie";
+	   var url = api.movieDetailUrl
 	  wx.request({
 	  	url: url,
 	  	data: {

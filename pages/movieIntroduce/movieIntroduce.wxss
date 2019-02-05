@@ -187,6 +187,7 @@
 	padding-left: 90rpx;
 	padding-right: 30rpx;
 	font-size: 28rpx;
+	padding-bottom: 20rpx;
 }
 .commit-score{
 	color: #999;

@@ -6,8 +6,44 @@ Page({
    */
   data: {
 	   ellipsis: true,
-
+	   imgUrls: [
+		  "http://p0.meituan.net/148.208/movie/ec30a55b1b20e7b8621bfb7682b530f9568248.jpg",
+		  "http://p1.meituan.net/148.208/movie/70147090b78af5ab17c04c60889d42fe729655.jpg",
+		  "http://p1.meituan.net/148.208/movie/616cd50a33550a9225ac781e52d14ae54967551.jpg"
+		],
+		indicatorDots: false,
+		autoplay: false,
+		interval: 5000,
+		duration: 1000
   },
+  changeIndicatorDots(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange(e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange(e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  },
+  animationfinish(e){
+	  console.log(e)
+	  console.log("运动结束")
+  },
+  
+  
+  
+  
   ellipsis: function () {  
     var value = !this.data.ellipsis;
     this.setData({

@@ -48,8 +48,210 @@
 /* 电影列表 */
 .movie-list{
 	width: 100%;
-	height: 220rpx;
+	height: 270rpx;
+	overflow: hidden;
 	background-color: #40454d;
-	border-top: 1rpx solid #b3a19d;
-	border-bottom: 1rpx solid #b3a19d;
+	border-top: 2rpx solid #b3a19d;
+	border-bottom: 2rpx solid #b3a19d;
+}
+.slide-image{
+	width: 130rpx;
+	height: 190rpx;
+}
+.swiper-item{
+	margin-top: 40rpx;
+}
+.movie-info{
+	text-align: center;
+	padding: 22rpx 30rpx;
+	border-bottom: 1rpx solid #999;
+}
+.movie-info-nm{
+	width: 80%;
+	margin-left: 10%;
+	font-size: 35rpx;
+	color: #333;
+}
+.movie-info-sc{
+	color: #ffb400;
+	font-size: 32rpx;
+}
+.movie-info-desc{
+	width: 90%;
+	margin-left: 5%;
+	font-size: 28rpx;
+	color: #999;
+}
+.showDate{
+	height: 100rpx;
+	display: flex;
+	border-bottom: 2rpx solid #999;
+}
+.showDateOne{
+	height: 100rpx;
+	line-height: 98rpx;
+	color: #666;
+	font-size: 32rpx;
+	margin: 0 30rpx;
+}
+.active{
+	color: #f03d37;
+	border-bottom: 2px solid #f03d37;
+}
+.movie-item{
+	width: 100%;
+	height: 155rpx;
+	border-bottom: 1rpx solid #999;
+	box-sizing: border-box;
+	padding-left: 26rpx;
+	padding-top: 20rpx;
+}
+.movie-item{
+	display: flex;
+}
+.movieTime{
+	width: 120rpx;
+	font-size: 40rpx;
+}
+.movietm{
+	color: #333;
+}
+.movieOver{
+	font-size: 26rpx;
+	color: #999;
+	margin-top: 15rpx;
+}
+.movieLang{
+	margin-left: 10rpx;
+	margin-top: 8rpx;
+	font-size: 30rpx;
+	width: 155rpx;
+	padding-left: 40rpx;
+	box-sizing: border-box;
+}
+.movieth{
+	margin-top: 15rpx;
+	font-size: 26rpx;
+	color: #999;
+}
+.movieMoney{
+	width: 295rpx;
+}
+.movieprice{
+	color: #f03d37;
+	font-size: 35rpx;
+}
+.vipPriceName{
+	display: inline-block;
+	border: 1rpx solid #ff9000;
+	box-sizing: border-box;
+	font-size: 20rpx;
+	color: #fff;
+    background-color: #f90;
+}
+.vipPrice{
+	display: inline-block;
+	color: #f90;
+    background-color: #fff;
+	font-size: 20rpx;
+	border: 1rpx solid #ff9000;
+	box-sizing: border-box;
+	padding-right: 2rpx;
+}
+.moviedesc{
+	font-size: 26rpx;
+	margin-top: 15rpx;
+	color: #999;
+}
+.movieBuy{
+	width: 110rpx;
+}
+.movieBuy button{
+	margin-top: 15rpx;
+	font-size: 26rpx;
+	width: 110rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	background-color: #f03d37;
+	text-align: center;
+	color: #fff;
+}
+.dealcon-title{
+	width: 492rpx;
+	height: 80rpx;
+	overflow: hidden;
+}
+.grey{
+	background-color: #f0f0f0;
+	width: 100%;
+	height: 25rpx;
+}
+.dealListBox{
+	padding-left: 30rpx;
+}
+.dealTitle{
+	
+	font-size: 32rpx;
+	color: #666;
+	height: 95rpx;
+	line-height: 95rpx;
+}
+.dealListOne{
+	width: 100%;
+	height: 226rpx;
+	overflow: hidden;
+	border-top: 1rpx solid #999;
+	display: flex;
+	padding: 20rpx 30rpx 20rpx 0;
+	box-sizing: border-box;
+}
+.dealcon{
+	margin-left: 15rpx;
+	font-size: 30rpx;
+	color: #333;
+}
+.dealcon-pay{
+	font-size: 25rpx;
+	color: #999;
+	text-align: right;
+	margin-right: 15rpx;
+	margin-top: 10rpx;
+}
+.dealNum{
+	overflow: hidden;
+	background-color: #f90;
+	color: #fff;
+	font-size: 25rpx;
+	padding: 2rpx 5rpx;
+	border-radius: 5rpx;
+}
+.dealimg{
+	width: 185rpx;
+	height: 185rpx;
+}
+.dealimg image{
+	width: 185rpx;
+	height: 185rpx;
+}
+.dealcon-buy{
+	font-size: 32rpx;
+	margin-top: 10rpx;
+}
+.dealprice{
+	color: #f03d37;
+	vertical-align: middle;
+}
+.dealgobuy{
+	display: inline-block;
+	width: 100rpx;
+	height: 50rpx;
+	color: #fff;
+    background-color: #f03d37;
+	font-size: 25rpx;
+	text-align: center;
+	line-height: 50rpx;
+	border-radius: 10rpx;
+	float: right;
+	vertical-align: middle;
+	margin-right: 10rpx;
 }

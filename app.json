@@ -1,6 +1,7 @@
 {
   "pages":[
     
+   "pages/cinemaDetail/cinemaDetail",
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
@@ -12,9 +13,10 @@
     "pages/logs/logs",
     "pages/movieDetail/movieDetail",
     "pages/movieIntroduce/movieIntroduce",
-    "pages/cinemaDetail/cinemaDetail",
-    "pages/index/index",
-		"pages/test/test"
+    "pages/test/test",
+    
+    "pages/index/index"
+	
   ],
   "window":{
     "backgroundTextStyle":"light",
