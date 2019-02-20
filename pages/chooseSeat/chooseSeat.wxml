@@ -1,0 +1,32 @@
+<!--pages/chooseSeat/chooseSeat.wxml-->
+<view class="page">
+	<view class="movie-info">
+		<view class="movie-name">{{MovieName}}</view>
+		<view class="movie-info-con">
+			<text class="movie-dt">{{MoviePlist.dt}}</text>
+			<text class="movie-tm">{{MoviePlist.tm}}</text>
+			<text class="movie-tp">{{MoviePlist.tp}}</text> 
+		</view>
+	</view>
+	<view class="seatcon">
+		<view class="hallName">
+			<text>{{seat.hall.hallName}}</text>
+		</view>
+		<view class="seatShow">
+			
+		</view>
+	</view>
+	<view class="foot">
+		<view>
+			<view class="showseat">
+				<view wx:for="{{seat.seat.seatTypeList}}" wx:key="{{index}}">
+					<image src="{{item.icon}}"></image>
+					<text>{{item.name}}</text>
+				</view>
+			</view>
+			<view class="chooseSeat">
+				<button>请先选座</button>
+			</view>
+		</view>
+	</view>
+</view>

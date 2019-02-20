@@ -35,7 +35,7 @@
 		</view>
 	</view>
 	<view class="subpage" wx:for="{{showOneMovie.shows}}" wx:key="{{index}}"  style='{{showIndex==index?"":"display:none"}}'>
-		<view class="movie-item" wx:for="{{item.plist}}" wx:for-item="movieItem" wx:for-index="movieIndex" wx:key="{{movieIndex}}">
+		<view class="movie-item" wx:for="{{item.plist}}" wx:for-item="movieItem" wx:for-index="movieIndex" wx:key="{{movieIndex}}" data-movieplist="{{movieItem}}" bindtap="goChooseSeat">
 			<view class="movieTime">
 				<view class="movietm">{{movieItem.tm}}</view>
 				<view class="movieOver"><text>{{showOneMovie.dur}}</text>分钟</view>
@@ -49,7 +49,7 @@
 				<view class="moviedesc">{{movieItem.extraDesc}}</view>
 			</view>
 			<view class="movieBuy">
-				<button>购票</button>
+				<button bindtap="goChooseSeat">购票</button>
 			</view>
 		</view>
 	</view>

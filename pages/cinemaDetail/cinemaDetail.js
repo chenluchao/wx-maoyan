@@ -13,6 +13,17 @@ Page({
 	  showIndex:0,
 	  dealList:[]
   },
+  goChooseSeat(e){
+	  //console.log(e)
+	  var movieplist=e.currentTarget.dataset.movieplist
+	  var moviename = this.data.showOneMovie.nm
+	  //console.log(moviename)
+	  wx.setStorageSync("Maoyan_MoviePlist",movieplist)
+	  wx.setStorageSync("Maoyan_MovieName",moviename)
+	  wx.navigateTo({
+	  	url: "../chooseSeat/chooseSeat"
+	  })
+  },
   dealChange(e){
   	var tag = e.currentTarget
   	var index = tag.dataset.index
@@ -21,16 +32,13 @@ Page({
   		showIndex:index
   	})
   },
-	clickMovie(e){
-		console.log(e)
-	},
   clickMovie(e){
 		//console.log(e)
 		var showOneMovie = e.currentTarget.dataset.movieone
 		this.setData({
 			showOneMovie: showOneMovie
 		})
-		console.log(this.data.showOneMovie)
+		//console.log(this.data.showOneMovie)
   },
 
   /**
@@ -66,7 +74,7 @@ Page({
 			for(var j=0;j<dealList.length;j++){
 				dealList[j].imageUrl = dealList[j].imageUrl.replace("w.h","128.180")
 			}
-			console.log(dealList)
+			//console.log(dealList)
 			// console.log(movieList);
 			self.setData({
 				movieList: movieList,
@@ -88,7 +96,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+	 
   },
 
   /**

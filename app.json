@@ -1,7 +1,5 @@
 {
   "pages":[
-    
-   "pages/cinemaDetail/cinemaDetail",
     "pages/movie/movie",
     "pages/cinema/cinema",
     "pages/mine/mine",
@@ -14,7 +12,8 @@
     "pages/movieDetail/movieDetail",
     "pages/movieIntroduce/movieIntroduce",
     "pages/test/test",
-    
+    "pages/cinemaDetail/cinemaDetail",
+    "pages/chooseSeat/chooseSeat",
     "pages/index/index"
 	
   ],
